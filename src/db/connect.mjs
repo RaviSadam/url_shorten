@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 export default function(){
-        mongoose.connect("mongodb+srv://ravi939:Ravi123@ravi.zdukcmr.mongodb.net/alter")
+        mongoose.connect(process.env.MONGO_URL)
                 .then(()=>console.log("Connected to mongoDB"))
                 .catch(()=>console.log("Error occured while connecting to mongoDB"))
 }
